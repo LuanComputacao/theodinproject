@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-DICTIONARY << %w[below down go going horn how howdy it i low own part partner sit]
+DICTIONARY = %w[below down go going horn how howdy it i low own part partner sit].freeze
 
 def substrings(text, dict)
   result = {}
@@ -8,8 +8,8 @@ def substrings(text, dict)
     match = text.downcase.scan(word)
     result.store(word, match.size) if match.size.positive?
   end
-  p result
+  result
 end
 
-substrings('Below', DICTIONARY)
-substrings("Howdy partner, sit down! How's it going?", DICTIONARY)
+p substrings('Below', DICTIONARY)
+p substrings("Howdy partner, sit down! How's it going?", DICTIONARY)
