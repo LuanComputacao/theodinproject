@@ -39,6 +39,14 @@ class Car
     speed = 0
     puts "#{speed} km/h"
   end
+
+  def self.fuel_consumption(liter, kilometers)
+    puts "#{kilometers / liter} kilometers per liter of gas"
+  end
+
+  def to_s
+    "<Car: {color: #{color}, speed: #{speed}}>"
+  end
 end
 
 # My Car class
@@ -58,6 +66,10 @@ class MyCar < Car
     puts "Your new color is #{color}"
   end
 
+  def to_s
+    "<Car: {color: #{color}, speed: #{speed}, year: #{year}, color: #{color}, model: #{@model}}>"
+  end
+
 end
 
 my_car = MyCar.new(2025, 'red', 'corsa')
@@ -70,3 +82,6 @@ puts my_car.color
 my_car.spray_paint('green')
 puts my_car.color
 puts my_car.year
+puts my_car
+puts Car.fuel_consumption(3, 10)
+
