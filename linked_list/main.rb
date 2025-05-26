@@ -60,8 +60,12 @@ linked_list.add(Node.new(1))
 linked_list.add(Node.new(4))
 linked_list.add(Node.new(6))
 linked_list.add(Node.new(8))
+
 linked_list.display
+
 linked_list.remove(8)
 linked_list.remove(1)
+
 puts "\nafter rmoving"
+
 linked_list.display
